@@ -223,14 +223,18 @@ int main()
     int y;
     int v;
     std::tie(x, y, v) = c;
-    std::cout << x << y << v << std::endl;  }  
-  Matrix<char> matrix_char('a');  matrix_char[100][100] = 'b';  assert(matrix_char[100][100] == 'b');  matrix_char[100][100] = 'a';  assert(matrix_char.size() == 0);  for ( auto d : matrix_char ) {
+    std::cout << x << y << v << std::endl;
+  }  
+  Matrix<char> matrix_char('a');
+  matrix_char[100][100] = 'b';
+  assert(matrix_char[100][100] == 'b');  matrix_char[100][100] = 'a';  assert(matrix_char.size() == 0);  for ( auto d : matrix_char ) {
     int x;
     int y;
     char v;
     std::tie(x, y, v) = d;
     std::cout << x << y << v << std::endl;
-  }  Matrix<std::string> matrix_strings(std::string("hi"));  auto tmp = matrix_strings[2][2];  tmp = "hello";  assert(tmp == "hello");  assert(matrix_strings.size() == 1);  assert(matrix_strings[2][2] == "hello");  tmp = "hi";  assert(matrix_strings.size() == 0);
+  }
+  Matrix<std::string> matrix_strings(std::string("hi"));  auto tmp = matrix_strings[2][2];  tmp = "hello";  assert(tmp == "hello");  assert(matrix_strings.size() == 1);  assert(matrix_strings[2][2] == "hello");  tmp = "hi";  assert(matrix_strings.size() == 0);
   for ( auto d : matrix_strings ) {
     int x;
     int y;
