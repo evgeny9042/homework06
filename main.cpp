@@ -223,7 +223,8 @@ int main()
     int y;
     int v;
     std::tie(x, y, v) = c;
-    std::cout << x << y << v << std::endl;  }  Matrix<char> matrix_char('a');  matrix_char[100][100] = 'b';  assert(matrix_char[100][100] == 'b');  matrix_char[100][100] = 'a';  assert(matrix_char.size() == 0);  for ( auto d : matrix_char ) {
+    std::cout << x << y << v << std::endl;  }  
+  Matrix<char> matrix_char('a');  matrix_char[100][100] = 'b';  assert(matrix_char[100][100] == 'b');  matrix_char[100][100] = 'a';  assert(matrix_char.size() == 0);  for ( auto d : matrix_char ) {
     int x;
     int y;
     char v;
@@ -237,5 +238,5 @@ int main()
     std::tie(x, y, v) = d;
     std::cout << x << y << v.c_str() << std::endl;
   }
-	return 0;
+  return 0;
 }
